@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "author": "ridhwaans",
   "scripts": {
-    "client": "cd client && yarn dev",
-    "dev": "nodemon server.js",
-    "prod": "node server",
-    "homehost": "concurrently --kill-others-on-fail \"yarn prod\" \"yarn client\""
+    "client": "cd client && yarn build",
+    "start": "node server.js",
+    "heroku-postbuild": "yarn client"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
@@ -17,10 +16,10 @@
     "node-dir": "^0.1.17",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
-    "underscore": "^1.9.1",
-    "yarn": "^1.13.0"
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
+    "yarn": "^1.13.0",
     "concurrently": "^4.1.0",
     "npm-check-updates": "^3.0.8"
   }
