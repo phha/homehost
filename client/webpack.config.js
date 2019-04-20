@@ -31,7 +31,7 @@ var config = {
             test: /\.(jpg|png|gif|svg|pdf|ico)$/i,
             use: [
                 {
-                    loader: 'file-loader'
+                    loader: 'url-loader'
                 }
             ]
         },
